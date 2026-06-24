@@ -1,0 +1,20 @@
+```
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: moibaldenegro
+      POSTGRES_PASSWORD: Bamm950817.a9421
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    driver: local
+```
